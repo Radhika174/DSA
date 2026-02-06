@@ -20,7 +20,7 @@ int main()
     printf("Enter marks: ");
     scanf("%f", &s.marks);
 
-    printf("\n--- Student Details ---\n");
+    printf("\nStudent Details\n");
     printf("Name: %s\n", s.name);
     printf("Roll No: %d\n", s.roll_no);
     printf("Marks: %.2f\n", s.marks);
