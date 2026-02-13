@@ -1,5 +1,6 @@
 #include <stdio.h>
-struct employee
+
+struct employee 
 {
     char name[50];
     char address[100];
@@ -7,7 +8,7 @@ struct employee
     float salary;
 };
 
-int main()
+int main() 
 {
     int n;
     printf("Enter number of employees: ");
@@ -21,10 +22,10 @@ int main()
         printf("\nEmployee %d\n", i + 1);
 
         printf("Name: ");
-        scanf("%s", e[i].name);
+        scanf(" %[^\n]", e[i].name);
 
         printf("Address: ");
-        scanf("%s", e[i].address);
+        scanf(" %[^\n]", e[i].address);
 
         printf("Age: ");
         scanf("%d", &e[i].age);
@@ -34,7 +35,9 @@ int main()
 
         sum += e[i].salary;
     }
+
     printf("\nAverage salary = %.2f\n", sum / n);
 
     return 0;
 }
+
