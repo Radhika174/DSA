@@ -1,4 +1,5 @@
 #include <stdio.h>
+
 struct date
 {
     int day;
@@ -19,7 +20,7 @@ int main()
     struct employee e;
 
     printf("Enter name: ");
-    scanf("%s", e.name);
+    scanf(" %[^\n]", e.name);
 
     printf("Enter id: ");
     scanf("%d", &e.id);
