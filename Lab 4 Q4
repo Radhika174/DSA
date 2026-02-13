@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+
 struct employee
 {
     char name[50];
@@ -16,14 +17,15 @@ int main()
         printf("\nEmployee %d\n", i + 1);
 
         printf("Name: ");
-        scanf("%s", e[i].name);
+        scanf(" %[^\n]", e[i].name);
 
         printf("Address: ");
-        scanf("%s", e[i].address);
+        scanf(" %[^\n]", e[i].address);
 
         printf("Salary: ");
         scanf("%f", &e[i].salary);
     }
+
     for (int i = 0; i < 4; i++)
     {
         for (int j = i + 1; j < 5; j++)
@@ -36,11 +38,13 @@ int main()
             }
         }
     }
+
     printf("\nEmployees in alphabetical order:\n");
     for (int i = 0; i < 5; i++) 
     {
-        printf("%s %s %.2f\n", e[i].name, e[i].address, e[i].salary);
+        printf("%s \n  %s \n  %.2f\n", e[i].name, e[i].address, e[i].salary);
     }
 
     return 0;
 }
+
